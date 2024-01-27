@@ -1112,10 +1112,10 @@ class ClassAbilities(AdventureMixin):
         base_int = character._int
         base_luck = character._luck
         base_att = max(character._att, 1)
-        modifier_bonus_luck = 0.01 * base_luck // 10
-        modifier_bonus_int = 0.01 * base_int // 20
-        modifier_penalty_str = 0.01 * base_att // 20
-        modifier_penalty_cha = 0.01 * base_cha // 20
+        modifier_bonus_luck = 0.1 * base_luck // 10
+        modifier_bonus_int = 0.1 * base_int // 20
+        modifier_penalty_str = -0.1 * base_att // 20
+        modifier_penalty_cha = 0.1 * base_cha // 20
         modifier = sum([modifier_bonus_int, modifier_bonus_luck, modifier_penalty_cha, modifier_penalty_str, modifier])
         modifier = max(0.001, modifier)
 
